@@ -3,7 +3,7 @@ Using language models to improve accuracy in detecting language disturbance in S
 ---------------------------------------------
 ```mermaid
 flowchart LR
-    A[Transformer Language Models] --> B{<font size=6>Does it have Encoder Transformer?}
+    A[Transformer Language Models] --> B[<font size=12>Does it have Encoder Transformer?]
     B -- Yes --> C[Does it also have Decoder Transformer?]
     C -- Yes ----> D[T5] ----> G{cross entropy loss}
     G --> J{static} 
