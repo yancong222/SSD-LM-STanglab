@@ -26,10 +26,12 @@ flowchart TD
     V ==> W{{word embeddings}}
     V ==> X{{utterance embeddings}}
     
-    click A "https://github.com/yancong222/scriptscz/blob/main/perplexity/ed_perplexity.py" _blank
-    click B "http://www.github.com" "Open this in a new tab" _blank
-    click G href "https://github.com/yancong222/SSD-LM-STanglab/tree/main/SSD-T5/cross%20entropy%20loss" _blank
+    click G href "https://github.com/yancong222/SSD-LM-STanglab/tree/main/SSD-T5/cross%20entropy%20loss" "Open this in a new tab" _blank
     click P href "https://github.com/yancong222/SSD-LM-STanglab/tree/main/SSD-T5/cosine%20similarity" "Open this in a new tab" _blank
+    click H href "https://github.com/yancong222/SSD-LM-STanglab/tree/main/SSD-BERT/logits" "Open this in a new tab" _blank
+    click S href "https://github.com/yancong222/SSD-LM-STanglab/tree/main/SSD-BERT/cosine%20similarity" "Open this in a new tab" _blank
+    click I href "https://github.com/yancong222/SSD-LM-STanglab/tree/main/SSD-GPT/perplexity" "Open this in a new tab" _blank
+    click V href "https://github.com/yancong222/SSD-LM-STanglab/tree/main/SSD-GPT/cosine%20similarity" "Open this in a new tab" _blank
     
     linkStyle 0 stroke-width:17px,fill:none,stroke:green;
     linkStyle 1 stroke-width:17px,fill:none,stroke:green;
