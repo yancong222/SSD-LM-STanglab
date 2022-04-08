@@ -2,7 +2,7 @@ Using language models to improve accuracy in detecting language disturbance in S
 
 ---------------------------------------------
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ff0000'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '13px'}}}%%
 flowchart TD
     A[Transformer Language Models] --> B[Does it have Encoder Transformer?]
     B -- Yes --> C[Does it also have Decoder Transformer?]
