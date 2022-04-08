@@ -28,5 +28,9 @@ flowchart TD
     click B "http://www.github.com" "Open this in a new tab" _blank
     click C href "http://www.github.com" _blank
     click D href "http://www.github.com" "Open this in a new tab" _blank
-   
+    linkStyle 0 stroke-width:2px,fill:none,stroke:blue;
+        linkStyle 1 stroke-width:2px,fill:none,stroke:green;
+        linkStyle 2 stroke-width:2px,fill:none,stroke:yellow;
+        linkStyle 3 stroke-width:2px,fill:none,stroke:pink;
+        linkStyle default stroke-width:2px,fill:none,stroke:red;
 ```
