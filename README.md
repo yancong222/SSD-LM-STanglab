@@ -2,8 +2,8 @@ Using language models to improve accuracy in detecting language disturbance in S
 
 ---------------------------------------------
 ```mermaid
-flowchart LR
-    A[Transformer Language Models] --> B[ <font size=24>Does it have Encoder Transformer? ]
+flowchart TD
+    A[Transformer Language Models] --> B[<font size=24>Does it have Encoder Transformer?]
     B -- Yes --> C[Does it also have Decoder Transformer?]
     C -- Yes ----> D[T5] ----> G{cross entropy loss}
     G --> J{static} 
@@ -27,4 +27,6 @@ flowchart LR
     click B "http://www.github.com" "Open this in a new tab" _blank
     click C href "http://www.github.com" _blank
     click D href "http://www.github.com" "Open this in a new tab" _blank
+    
+classDef className fill:#f9f,stroke:#333,stroke-width:4px
 ```
