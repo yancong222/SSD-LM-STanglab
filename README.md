@@ -1,5 +1,4 @@
-Using language models to improve accuracy in detecting language disturbance in Schizophrenia Spectrum Disorder Speech
-
+Understanding Schizophrenia: Trarnsformer Language Models Strategy Tree
 ---------------------------------------------
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '100px'}}}%%
@@ -12,7 +11,7 @@ flowchart TD
     D ====> P[(cosine similarity)]
     P ==> Q{{word embeddings}}
     P ==> R{{utterance embeddings}}
-    C == No ==> E[[BERT]] ====> H[(probability logits)]
+    C == No ==> E[[BERT]] ====> H[(logits)]
     H ==> L{{static}}
     H ==> M{{moving window}}
     E ====> S[(cosine similarity)]
