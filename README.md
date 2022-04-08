@@ -28,6 +28,5 @@ flowchart TD
     click B "http://www.github.com" "Open this in a new tab" _blank
     click C href "http://www.github.com" _blank
     click D href "http://www.github.com" "Open this in a new tab" _blank
-    
-classDef className fill:#f9f,stroke:#333,stroke-width:4px
+   
 ```
