@@ -28,7 +28,22 @@ flowchart TD
     click B "http://www.github.com" "Open this in a new tab" _blank
     click C href "http://www.github.com" _blank
     click D href "http://www.github.com" "Open this in a new tab" _blank
-    linkStyle 0 stroke-width:20px,fill:none,stroke:green;
-    linkStyle 1 stroke-width:20px,fill:none,stroke:green;
+    linkStyle 0 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 1 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 2 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 3 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 4 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 5 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 6 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 7 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 8 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 9 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 10 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 11 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 12 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 13 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 14 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 15 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 16 stroke-width:17px,fill:none,stroke:green;
     
 ```
