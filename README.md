@@ -5,11 +5,11 @@ Using language models to improve accuracy in detecting language disturbance in S
 flowchart TD
     A[Transformer Language Models] --> B[<font size=24>Does it have Encoder Transformer?]
     B -- Yes --> C[Does it also have Decoder Transformer?]
-    C -- Yes ----> D[T5] ----> G{cross entropy loss}
-    G --> J{static} 
-    G --> K{moving window}
-    D ----> P{cosine similarity}
-    P --> Q{word embeddings}
+    C -- Yes ----> D[[T5]] ----> G[(cross entropy loss)]
+    G --> J[(static)]
+    G --> K[(moving window)]
+    D ----> P[(cosine similarity)]
+    P --> Q[(word embeddings)]
     P --> R{utterance embeddings}
     C -- No ----> E[BERT] ----> H{probability logits}
     H --> L{static} 
