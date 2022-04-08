@@ -1,7 +1,7 @@
-**Progress**:
+**Progress**
 
-  ongoing: derive logits with static strategy
+  _ongoing_: derive logits with static strategy
   
-  todo: derive logits with moving window strategy
+  _todo_: derive logits with moving window strategy
   
-  done: cosine similarity
+  _done_: cosine similarity
