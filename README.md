@@ -1,4 +1,4 @@
-Understanding Schizophrenia: Trarnsformer Language Models Strategy Tree
+Using language models to improve accuracy of detecting language disturbances in Schizophrenia Spectrum Disorder Speech
 ---------------------------------------------
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '100px'}}}%%
