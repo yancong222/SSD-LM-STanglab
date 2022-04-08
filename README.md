@@ -33,6 +33,10 @@ flowchart TD
     click I href "https://github.com/yancong222/SSD-LM-STanglab/tree/main/SSD-GPT/perplexity" "Open this in a new tab" _blank
     click V href "https://github.com/yancong222/SSD-LM-STanglab/tree/main/SSD-GPT/cosine%20similarity" "Open this in a new tab" _blank
     
+    click D href "https://github.com/yancong222/SSD-LM-STanglab/tree/main/SSD-T5" "Open this in a new tab" _blank
+    click E href "https://github.com/yancong222/SSD-LM-STanglab/tree/main/SSD-BERT" "Open this in a new tab" _blank
+    click F href "https://github.com/yancong222/SSD-LM-STanglab/tree/main/SSD-GPT" "Open this in a new tab" _blank
+    
     linkStyle 0 stroke-width:17px,fill:none,stroke:green;
     linkStyle 1 stroke-width:17px,fill:none,stroke:green;
     linkStyle 2 stroke-width:17px,fill:none,stroke:green;
