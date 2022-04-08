@@ -1,7 +1,8 @@
 Using language models to improve accuracy of detecting language disturbances in Schizophrenia Spectrum Disorder Speech
 
-To see detail, click on the node
 ---------------------------------------------
+To see detail, click on the node
+
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '100px'}}}%%
 flowchart TD
