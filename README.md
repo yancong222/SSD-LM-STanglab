@@ -25,10 +25,12 @@ flowchart TD
     F ====> V[(cosine similarity)]
     V ==> W{{word embeddings}}
     V ==> X{{utterance embeddings}}
+    
     click A "https://github.com/yancong222/scriptscz/blob/main/perplexity/ed_perplexity.py" _blank
     click B "http://www.github.com" "Open this in a new tab" _blank
-    click C href "http://www.github.com" _blank
-    click D href "http://www.github.com" "Open this in a new tab" _blank
+    click G href "https://github.com/yancong222/SSD-LM-STanglab/tree/main/SSD-T5/cross%20entropy%20loss" _blank
+    click P href "https://github.com/yancong222/SSD-LM-STanglab/tree/main/SSD-T5/cosine%20similarity" "Open this in a new tab" _blank
+    
     linkStyle 0 stroke-width:17px,fill:none,stroke:green;
     linkStyle 1 stroke-width:17px,fill:none,stroke:green;
     linkStyle 2 stroke-width:17px,fill:none,stroke:green;
