@@ -2,8 +2,9 @@ Using language models to improve accuracy in detecting language disturbance in S
 
 ---------------------------------------------
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ff0000'}}}%%
 flowchart TD
-    A[<font size=24>Transformer Language Models] --> B[<font size=24>Does it have Encoder Transformer?]
+    A[Transformer Language Models] --> B[Does it have Encoder Transformer?]
     B -- Yes --> C[Does it also have Decoder Transformer?]
     C -- Yes ----> D[[T5]] ----> G[(cross entropy loss)]
     G --> J{{static}}
