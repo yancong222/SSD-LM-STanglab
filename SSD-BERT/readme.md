@@ -7,3 +7,7 @@
     - derive logits with static strategy
 3. _done_
     - cosine similarity using utterance embeddings
+        -  TLC factors: 
+            -  disorganized speech is positively correlated with similarity [**clinical data**: Remora]
+            -  null effects regarding impaired expressivity [**clinical data**: Remora]
+        -  group difference:
