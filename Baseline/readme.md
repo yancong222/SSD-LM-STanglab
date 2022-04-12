@@ -1,5 +1,7 @@
 **Benchmarking**
 
+**Source:**
+
 1. _Latent Semantic Analysis_
     - Details
       - Bedi: cosine similarity of adjacent and skip-one automatically parsed sentences. Convex hull modeling. 
@@ -26,3 +28,7 @@
     - Findings (Xu et al, 2020)
       - Minimum coherence > mean coherence. 
       - Both centroid-based metrics better than sequential or gap. 
+
+**Ongoing:**
+    - GloVe ngram cosine
+    - NLTK.lm ngram perplexity
