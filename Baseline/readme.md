@@ -30,5 +30,8 @@
       - Both centroid-based metrics better than sequential or gap. 
 
 **Ongoing:**
-    - GloVe ngram cosine
-    - NLTK.lm ngram perplexity
+GloVe ngram cosine
+    
+NLTK.lm ngram perplexity
+    
+    
