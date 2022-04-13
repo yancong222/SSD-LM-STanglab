@@ -48,8 +48,12 @@
  
 **Ongoing:**
 
-a. GloVe ngram cosine
-    
-b. NLTK.lm ngram perplexity
+1. _GloVe ngram cosine_
+    - Incoherence and Inefficiency are negatively correlated with similarity [**Clinical data: YT turn**]
+    - Impaired Expressivity is positively/negatively correlated with similarity [**Clinical data: YT turn**]
+2. _NLTK.lm ngram perplexity_
+    - 
+    - 
+
     
     
