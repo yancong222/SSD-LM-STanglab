@@ -35,12 +35,17 @@
       - Both centroid-based metrics better than sequential or gap. 
 4. _Transformer-based language models_
     - Details
-      - Huang et al (to appear):
-      - Coronan et al : 
+      - Huang et al:
+        - BERT for semantic 
+        - ELECTRA for syntactic
+        - TERA for acoustic
     - Findings
-      - Huang et al (to appear):
-      - Coronan et al : 
-    
+      - Huang et al:
+        - Pre-trained BERT's embedding is the most crucial feature in all scales but PANSS General
+        - Fine-tuned ELECTEA (on CTB8) has moderate impact on TLC and PANSS
+        - TERA has a low contribution when predicting thought disorders, especially the positive symptom and general psychopathology items (emotions reflect more in sounds than texts)
+        - Training the model on TLC and PANSS together can provide higher performances compared to training on each scale alone. 
+ 
 **Ongoing:**
 
 a. GloVe ngram cosine
