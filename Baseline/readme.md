@@ -1,4 +1,4 @@
-**Benchmarking**
+**BENCHMARKING**
 
 **Source:**
 
@@ -15,10 +15,15 @@
       - Embeddings: LSA + Glove + Word2Vec + Sent2Vec; 
       - Sentence: mean vector + TD-IDF + SIF; 
       - Models: Tangentiality (vs. interviewer) + Coherence (within subject)
-    - Findings (Iter et al, 2018)
-      - Word2Vec+SIF+incoherence model; 
-      - LSA + TFIDF+Tangentialtiy; 
-      - (Glove or Word2Vec) + SIF + Tangentiality
+      - Strategy: Sliding windows
+    - Findings 
+      - Iter et al, 2018:
+        - Word2Vec+SIF+incoherence model; 
+        - LSA + TFIDF+Tangentialtiy; 
+        - (Glove or Word2Vec) + SIF + Tangentiality
+      - Voppel et al (2021): 
+        - Use language connectedness in SSD to classify SSD and HV using spontaneous speech;
+        - Using a word2vec semantic space model across multiple window sizes 
 3. _Coherence_
     - Details (Coherence calcualtions)
       - Sequential, Gap, static centroid vs. cumulative centroid. 
@@ -28,7 +33,14 @@
     - Findings (Xu et al, 2020)
       - Minimum coherence > mean coherence. 
       - Both centroid-based metrics better than sequential or gap. 
-
+4. _Transformer-based language models_
+    - Details
+      - Huang et al (to appear):
+      - Coronan et al : 
+    - Findings
+      - Huang et al (to appear):
+      - Coronan et al : 
+    
 **Ongoing:**
 
 a. GloVe ngram cosine
