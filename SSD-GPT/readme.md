@@ -18,4 +18,4 @@
             - disorganized speech is positively correlated with perplexity [**clinical data**: YT passage]
             - impaired expressivity is weakly positively correlated with perplexity [**clinical data**: YT passage]
         - group difference:
-          - 
+            - todo
