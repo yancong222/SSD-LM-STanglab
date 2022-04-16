@@ -25,7 +25,7 @@
         - Use language connectedness in SSD to classify SSD and HV using spontaneous speech;
         - Using a word2vec semantic space model across multiple window sizes 
       - Parola et al (under review):
-        - todo
+        - Only one previous result, i.e., reduced second-order coherence in schizophrenia, generalized across the entire corpus.
 3. _Coherence_
     - Details (Coherence calcualtions)
       - Sequential, Gap, static centroid vs. cumulative centroid. 
