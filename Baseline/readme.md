@@ -14,7 +14,7 @@
     - Details
       - Embeddings: LSA + Glove + Word2Vec + Sent2Vec; 
       - Sentence: mean vector + TD-IDF + SIF; 
-      - Models: Tangentiality (vs. interviewer) + Coherence (within subject) + Second order coherence (skip a sentence: the similarity between phrases separated by another intervening phrase, averaged over all the phrases in the text)
+      - Models: Tangentiality (vs. interviewer) + Coherence (within subject)
       - Strategy: Sliding windows 
     - Findings 
       - Iter et al, 2018:
@@ -24,17 +24,19 @@
       - Voppel et al (2021): 
         - Use language connectedness in SSD to classify SSD and HV using spontaneous speech;
         - Using a word2vec semantic space model across multiple window sizes 
-      - Parola et al (under review):
-        - Only one previous result, i.e., reduced second-order coherence in schizophrenia, generalized across the entire corpus.
 3. _Coherence_
     - Details (Coherence calcualtions)
       - Sequential, Gap, static centroid vs. cumulative centroid. 
       - +/- lemmatization. 
       - LSA vs. skipgram with negative sampling (SGNS). 
       - Mean vs. minimum values.
-    - Findings (Xu et al, 2020)
-      - Minimum coherence > mean coherence. 
-      - Both centroid-based metrics better than sequential or gap. 
+      - Second order coherence - skip a sentence: the similarity between phrases separated by another intervening phrase, averaged over all the phrases in the text
+    - Findings 
+      - Xu et al, 2020:
+        - Minimum coherence > mean coherence. 
+        - Both centroid-based metrics better than sequential or gap. 
+      - Parola et al (under review):
+        - Only one previous result, i.e., reduced second-order coherence in schizophrenia, generalized across the entire corpus.
 4. _Transformer-based language models_
     - Details
       - Huang et al:
