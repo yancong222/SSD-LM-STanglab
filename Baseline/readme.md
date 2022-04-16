@@ -14,7 +14,7 @@
     - Details
       - Embeddings: LSA + Glove + Word2Vec + Sent2Vec; 
       - Sentence: mean vector + TD-IDF + SIF; 
-      - Models: Tangentiality (vs. interviewer) + Coherence (within subject) + Second order coherence (skip a sentence)
+      - Models: Tangentiality (vs. interviewer) + Coherence (within subject) + Second order coherence (skip a sentence: the similarity between phrases separated by another intervening phrase, averaged over all the phrases in the text)
       - Strategy: Sliding windows 
     - Findings 
       - Iter et al, 2018:
