@@ -5,7 +5,7 @@ Using language models to improve accuracy of detecting language disturbances in 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '100px'}}}%%
 flowchart TD
-    A[Strategies for Detecting Language Disturbances in Psychosis] ==> B[Measurement unit]
+    A[Embedding Strategies for Detecting Language Disturbances in Psychosis] ==> B[Measurement unit]
     B == Word ==> C[Language Models]
     C == Baseline ==> D[[GloVe]] ====> G[(Static)]
     G ==> J{{min max}}
