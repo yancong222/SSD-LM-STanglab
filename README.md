@@ -11,14 +11,14 @@ flowchart TD
     G ==> J{{min max}}
     G ==> K{{mean std}}
     D ====> P[(Moving window)]
-    P ==> Q{{Bigram}}
-    P ==> R{{Ohter size}}
+    P ==> Q{{Coherence 5,10}}
+    P ==> R{{Coherence-K2:10}}
     C == Transformer ==> E[[BERT T5 GPT]] ====> H[(Static)]
     H ==> L{{min max}}
     H ==> M{{mean std}}
     E ====> S[(Moving window)]
-    S ==> T{{Bigram}}
-    S ==> U{{Ohter size}}
+    S ==> T{{Coherence 5,10}}
+    S ==> U{{Coherence-K2:10}}
     B == Utterance ==> F[[Language Models]] ====> I[(GloVe)]
     I ==> N{{FOC}}
     I ==> O{{SOC}}
