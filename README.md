@@ -8,17 +8,17 @@ flowchart TD
     A[Strategies for Detecting Language Disturbances in Psychosis] ==> B[Measurement unit]
     B == Word ==> C[Language Models]
     C == Baseline ==> D[[GloVe]] ====> G[(Static)]
-    G ==> J{{Adjacent words min, max}}
-    G ==> K{{Adjacent words mean, std}}
+    G ==> J{{min max}}
+    G ==> K{{mean std}}
     D ====> P[(Moving window)]
     P ==> Q{{Bigram}}
     P ==> R{{Ohter size}}
-    C == Transformer ==> E[[BERT T5 GPT]] ====> H[(FOC)]
-    H ==> L{{FOC min, max}}
-    H ==> M{{FOC mean, std}}
-    E ====> S[(SOC)]
-    S ==> T{{SOC min, max}}
-    S ==> U{{SOC mean, std}}
+    C == Transformer ==> E[[BERT T5 GPT]] ====> H[(Static)]
+    H ==> L{{min max}}
+    H ==> M{{mean std}}
+    E ====> S[(Moving window)]
+    S ==> T{{Bigram}}
+    S ==> U{{Ohter size}}
     B == Utterance ==> F[[Language Models]] ====> I[(GloVe)]
     I ==> N{{FOC}}
     I ==> O{{SOC}}
