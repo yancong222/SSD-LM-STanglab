@@ -1,4 +1,4 @@
-Using language models to improve accuracy of detecting language disturbances in Schizophrenia Spectrum Disorder Speech (To see detail, click on the node)
+Using language models to improve accuracy of detecting language disturbances in Schizophrenia Spectrum Disorder Speech (click on the node to see detail)
 
 ---------------------------------------------
 
