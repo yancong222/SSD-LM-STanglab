@@ -22,6 +22,8 @@ flowchart TD
     B == Utterance ==> F[[Language Models]] ====> I[(GloVe)]
     I ==> N{{FOC}}
     I ==> O{{SOC}}
+    N ==> a{{min, max, mean, std}}
+    N ==> b{{5%, 95%, median, IQR}}
     F ====> V[(BERT T5 GPT)]
     V ==> W{{FOC}}
     V ==> X{{SOC}}
@@ -50,6 +52,8 @@ flowchart TD
     linkStyle 20 stroke-width:17px,fill:none,stroke:green;
     linkStyle 21 stroke-width:17px,fill:none,stroke:green;
     linkStyle 22 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 23 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 24 stroke-width:17px,fill:none,stroke:green;
     
 ```
 ------------------------------------------------------------------
