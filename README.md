@@ -24,9 +24,15 @@ flowchart TD
     I ==> O{{SOC}}
     N ==> a{{min, max, mean, std}}
     N ==> b{{5%, 95%, median, IQR}}
+    O ==> c{{min, max, mean, std}}
+    O ==> d{{5%, 95%, median, IQR}}
     F ====> V[(BERT T5 GPT)]
     V ==> W{{FOC}}
     V ==> X{{SOC}}
+    W ==> e{{min, max, mean, std}}
+    W ==> f{{5%, 95%, median, IQR}}
+    X ==> g{{min, max, mean, std}}
+    X ==> h{{5%, 95%, median, IQR}}
     
     
     linkStyle 0 stroke-width:17px,fill:none,stroke:green;
@@ -54,6 +60,12 @@ flowchart TD
     linkStyle 22 stroke-width:17px,fill:none,stroke:green;
     linkStyle 23 stroke-width:17px,fill:none,stroke:green;
     linkStyle 24 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 25 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 26 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 27 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 28 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 29 stroke-width:17px,fill:none,stroke:green;
+    linkStyle 30 stroke-width:17px,fill:none,stroke:green;
     
 ```
 ------------------------------------------------------------------
