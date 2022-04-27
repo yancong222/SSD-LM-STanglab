@@ -3,7 +3,7 @@ Using language models to improve accuracy of detecting language disturbances in 
 ---------------------------------------------
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '100px'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '50px'}}}%%
 flowchart TD
     A[Embedding Strategies for Detecting Language Disturbances in Psychosis] ==> B[Measurement unit]
     B == Word ==> C[Language Models]
@@ -71,7 +71,7 @@ flowchart TD
 ------------------------------------------------------------------
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '50px'}}}%%
+%%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '100px'}}}%%
 flowchart TD
     A[Transformer Language Models] ==> B[Does it have Encoder Transformer?]
     B == Yes ==> C[Does it also have Decoder Transformer?]
