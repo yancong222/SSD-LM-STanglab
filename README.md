@@ -7,12 +7,12 @@ Using language models to improve accuracy of detecting language disturbances in 
 flowchart TD
     A[Embedding Strategies for Detecting Language Disturbances in Psychosis] ==> B[Measurement unit]
     B == Word ==> C[Language Models]
-    C == Baseline ==> D[[GloVe]] ====> G[(Static)]
-    G ==> J{{min max}}
-    G ==> K{{mean std}}
-    D ====> P[(Moving window)]
-    P ==> Q{{Coherence 5,10}}
-    P ==> R{{Coherence-K2:10}}
+    C == Baseline ==> D[[GloVe]] ====> G[(Coherence within a window i, i=[5,10])]
+    G ==> J{{min, max, mean, std}}
+    G ==> K{{5%, 95%, median, IQR}}
+    D ====> P[(Coherence-Ki, cosine between Token0 and Token0+i)]
+    P ==> Q{{min, max, mean, std}}
+    P ==> R{{5%, 95%, median, IQR}}
     C == Transformer ==> E[[BERT T5 GPT]] ====> H[(Static)]
     H ==> L{{min max}}
     H ==> M{{mean std}}
