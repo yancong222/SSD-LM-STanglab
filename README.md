@@ -10,15 +10,15 @@ flowchart TD
     C == Baseline ==> D[[GloVe]] ====> G[(Coherence within a window i, i=5,10)]
     G ==> J{{min, max, mean, std}}
     G ==> K{{5%, 95%, median, IQR}}
-    D ====> P[(Coherence-Ki, cosine between Token0 and Token0+i)]
+    D ====> P[(Coherence-Ki, cosine of 0 and 0+i, i=2:10)]
     P ==> Q{{min, max, mean, std}}
     P ==> R{{5%, 95%, median, IQR}}
-    C == Transformer ==> E[[BERT T5 GPT]] ====> H[(Static)]
-    H ==> L{{min max}}
-    H ==> M{{mean std}}
-    E ====> S[(Moving window)]
-    S ==> T{{Coherence 5,10}}
-    S ==> U{{Coherence-K2:10}}
+    C == Transformer ==> E[[BERT T5 GPT]] ====> H[(Coherence within a window i, i=5,10)]
+    H ==> L{{min, max, mean, std}}
+    H ==> M{{5%, 95%, median, IQR}}
+    E ====> S[(Coherence-Ki, cosine of 0 and 0+i, i=2:10)]
+    S ==> T{{min, max, mean, std}}
+    S ==> U{{5%, 95%, median, IQR}}
     B == Utterance ==> F[[Language Models]] ====> I[(GloVe)]
     I ==> N{{FOC}}
     I ==> O{{SOC}}
