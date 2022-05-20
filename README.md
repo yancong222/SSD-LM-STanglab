@@ -16,7 +16,7 @@ flowchart LR
     C == Transformer ==> E[[BERT T5 GPT]] ====> H[(Coherence within a window i, i=5,10)]
     H ==> L{{min, max, mean, std}}
     H ==> M{{5%, 95%, median, IQR}}
-    E ====> S[(Coherence-Ki, cosine of 0 and 0+i, i=2:10)]
+    E ====> S[(Coherence-Ki, cosine of id and id+i, i=2:10)]
     S ==> T{{min, max, mean, std}}
     S ==> U{{5%, 95%, median, IQR}}
     B == Utterance ==> F[[Language Models]] ====> I[(GloVe)]
