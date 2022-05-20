@@ -10,13 +10,13 @@ flowchart LR
     C == Baseline ==> D[[GloVe]] ====> G[(Coherence within a window i, i=5,10)]
     G ==> J{{min, max, mean, std}}
     G ==> K{{5%, 95%, median, IQR}}
-    D ====> P[(Coherence-Ki, \"R (abc) functions\", i=2:10)]
+    D ====> P[(Coherence-Ki, similarity word_id vs. word_id+i, i=2:10)]
     P ==> Q{{min, max, mean, std}}
     P ==> R{{5%, 95%, median, IQR}}
     C == Transformer ==> E[[BERT T5 GPT]] ====> H[(Coherence within a window i, i=5,10)]
     H ==> L{{min, max, mean, std}}
     H ==> M{{5%, 95%, median, IQR}}
-    E ====> S[(Coherence-Ki, similarity<word_id,word_id+i>, i=2:10)]
+    E ====> S[(Coherence-Ki, similarity word_id vs. word_id+i, i=2:10)]
     S ==> T{{min, max, mean, std}}
     S ==> U{{5%, 95%, median, IQR}}
     B == Utterance ==> F[[Language Models]] ====> I[(GloVe)]
