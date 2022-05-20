@@ -10,7 +10,7 @@ flowchart LR
     C == Baseline ==> D[[GloVe]] ====> G[(Coherence within a window i, i=5,10)]
     G ==> J{{min, max, mean, std}}
     G ==> K{{5%, 95%, median, IQR}}
-    D ====> P[(Coherence-Ki, cosine of 0 and 0+i, i=2:10)]
+    D ====> P[(Coherence-Ki, cosine of id and id+i, i=2:10)]
     P ==> Q{{min, max, mean, std}}
     P ==> R{{5%, 95%, median, IQR}}
     C == Transformer ==> E[[BERT T5 GPT]] ====> H[(Coherence within a window i, i=5,10)]
