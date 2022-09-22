@@ -2,7 +2,7 @@
 
 1. _ongoing_
     - cosine similarity using word embeddings
-2. _todo_
+2. _brainstorm_
     - cross-entropy loss using moving window strategy
 3. _done_
     - cosine similarity using utterance embeddings
