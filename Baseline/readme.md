@@ -50,7 +50,7 @@
         - TERA has a low contribution when predicting thought disorders, especially the positive symptom and general psychopathology items (emotions reflect more in sounds than texts)
         - Training the model on TLC and PANSS together can provide higher performances compared to training on each scale alone. 
  
-**Ongoing:**
+**Brainstorm:**
 
 1. _GloVe ngram cosine_
     - Incoherence, Inefficiency, and Impaired Expressivity are negatively correlated with similarity [**Clinical data: YT passage**]
