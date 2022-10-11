@@ -25,10 +25,10 @@ flowchart LR
     D ====> P[(K2:10: word_id vs. word_id+i, i=2:10)]
     P ==> Q{{min, max, mean, std}}
     P ==> R{{5%, 95%, median, IQR}}
-    C == Transformer ==> E[[BERT T5 GPT]] ====> H[(Coherence within a window i, i=5,10)]
+    C == Transformer ==> E[[BERT T5 GPT]] ====> H[(MV5/10: Coherence within a window i, i=5,10)]
     H ==> L{{min, max, mean, std}}
     H ==> M{{5%, 95%, median, IQR}}
-    E ====> S[(Coherence-Ki: word_id vs. word_id+i, i=2:10)]
+    E ====> S[(K2:10: word_id vs. word_id+i, i=2:10)]
     S ==> T{{min, max, mean, std}}
     S ==> U{{5%, 95%, median, IQR}}
     B == Utterance ==> F[[Language Models]] ====> I[(GloVe)]
