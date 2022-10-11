@@ -12,6 +12,8 @@ FOC: the first order cosine similarity of consecutive phrase vectors
 
 SOC: second order cosine similarity between phrase separated by another intervening phrase
 
+## Pipeline details can be found in the PDF file
+
 ---------------------------------------------
 
 ```mermaid
