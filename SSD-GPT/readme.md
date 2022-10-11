@@ -19,12 +19,17 @@ Extract adjacent sentence pairs similarity from contextualized sentence embeddin
       # encode sentences to get their embeddings
       sentence = "I see you"
       embedding = get_embeddings(sentence, engine = 'your engine')
-      embedding 
+      print(embedding)
       # compute similarity scores of two embeddings
       result = cosine_similarity(embedding1, embedding2) 
-      print("Similarity score:", result)
 ''' 
-0.7445092103171302
+[[0.009507982060313225,
+  -0.005366108380258083,
+  0.00782190915197134,
+  0.019147917628288,
+  ...
+  0.004148108884692192,
+  ...]]
 '''
 ```
 
