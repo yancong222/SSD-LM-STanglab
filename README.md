@@ -1,5 +1,12 @@
-Using language models to improve accuracy of detecting language disturbances in Schizophrenia Spectrum Disorder Speech (click on the node to see detail)
+# Using language models to improve accuracy of detecting language disturbances in Schizophrenia Spectrum Disorder Speech (click on the tree node to see details)
 
+## Word/token level coherence measurement:
+K2:10: the word-to-word variability at K inter-word distances, with K ranging from 2 to 10
+MV5/10: average semantic similarity of each word in 5-or 10-words window
+
+## Utterance level coherence measurement: 
+FOC: the first order cosine similarity of consecutive phrase vectors
+SOC: second order cosine similarity between phrase separated by another intervening phrase
 ---------------------------------------------
 
 ```mermaid
