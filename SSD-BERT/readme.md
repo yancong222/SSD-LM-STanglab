@@ -39,10 +39,11 @@ Extract adjacent sentence pairs similarity from contextualized sentence embeddin
     - derive logits with moving window strategy
     - derive logits with static strategy
 3. _done_
-    - cosine similarity using utterance embeddings
+    - word/token level cosine similarity using utterance/sentence embeddings
         -  TLC factors: 
-            -  disorganized speech is positively correlated with similarity [**clinical data**: Remora]
+            -  disorganized speech (incoherence and inefficiency) is positively correlated with similarity [**clinical data**: Remora]
             -  null effects regarding impaired expressivity [**clinical data**: Remora]
         -  group difference:
+            - Statistically significant group effects between SSD and HV
             - Conceptual replication of Xu et al (2020)
             - Static centroid method
