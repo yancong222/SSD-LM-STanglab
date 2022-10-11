@@ -145,5 +145,7 @@ flowchart LR
 
 
 ---------------------------------------------
-## Pipeline details can be found in the [PDF file] (https://github.com/yancong222/SSD-LM-STanglab/blob/main/SSDHV_SemanticSimilarity_Methods.pdf)
+## Note
+
+Pipeline details can be found in the [PDF file] (https://github.com/yancong222/SSD-LM-STanglab/blob/main/SSDHV_SemanticSimilarity_Methods.pdf)
 
