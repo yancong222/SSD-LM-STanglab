@@ -2,13 +2,13 @@
 
 Install from OpenAI API using:
 
-```pip install sentence-transformers```
+```pip install --upgrade openai```
 
 ## Supported Functionality
 
 - Extract word representations from Contextualized Word Embeddings
 - Extract sentence representations from Contextualized Paragraph Embeddings
-- Score sequences using language model scoring techniques
+- Score sequences using language model scoring techniques [Brown et al. (2020)](https://arxiv.org/abs/2005.14165).
 
 
 ## Examples
@@ -16,16 +16,15 @@ Install from OpenAI API using:
 Extract adjacent sentence pairs similarity from contextualized sentence embeddings:
 
 ```py
-# encode sentences to get their embeddings
-      embedding1 = model.encode(sentence1, convert_to_tensor=True)
-      embedding2 = model.encode(sentence2, convert_to_tensor=True)
+      # encode sentences to get their embeddings
+      sentence = "I see you"
+      embedding = get_embeddings(sentence, engine = 'your engine')
+      embedding 
       # compute similarity scores of two embeddings
-      cosine_scores = util.pytorch_cos_sim(embedding1, embedding2)
-      print("Sentence 1:", sentence1)
-      print("Sentence 2:", sentence2)
-      print("Similarity score:", cosine_scores.item())
+      result = cosine_similarity(embedding1, embedding2) 
+      print("Similarity score:", result)
 ''' 
-0.4197316508
+0.7445092103171302
 '''
 ```
 
