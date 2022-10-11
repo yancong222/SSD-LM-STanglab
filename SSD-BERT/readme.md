@@ -2,34 +2,32 @@
 
 ## Installation
 
-Install from Pypi using:
+Install from HuggingFace transformers using:
 
-```pip install minicons```
+```pip install sentence-transformers```
 
 ## Supported Functionality
 
 - Extract word representations from Contextualized Word Embeddings
-- Score sequences using language model scoring techniques, including masked language models following [Salazar et al. (2020)](https://www.aclweb.org/anthology/2020.acl-main.240.pdf).
+- Extract sentence representations from Contextualized Paragraph Embeddings
+- Score sequences using language model scoring techniques
 
 
 ## Examples
 
-1. Extract word representations from contextualized word embeddings:
+Extract adjacent sentence pairs similarity from contextualized sentence embeddings:
 
 ```py
-from minicons import cwe
-
-model = cwe.CWE('bert-base-uncased')
-
-context_words = [("I went to the bank to withdraw money.", "bank"), 
-                 ("i was at the bank of the river ganga!", "bank")]
-
-print(model.extract_representation(context_words, layer = 12))
-
+# encode sentences to get their embeddings
+      embedding1 = model.encode(sentence1, convert_to_tensor=True)
+      embedding2 = model.encode(sentence2, convert_to_tensor=True)
+      # compute similarity scores of two embeddings
+      cosine_scores = util.pytorch_cos_sim(embedding1, embedding2)
+      print("Sentence 1:", sentence1)
+      print("Sentence 2:", sentence2)
+      print("Similarity score:", cosine_scores.item())
 ''' 
-tensor([[ 0.5399, -0.2461, -0.0968,  ..., -0.4670, -0.5312, -0.0549],
-        [-0.8258, -0.4308,  0.2744,  ..., -0.5987, -0.6984,  0.2087]],
-       grad_fn=<MeanBackward1>)
+0.4197316508
 '''
 ```
 
