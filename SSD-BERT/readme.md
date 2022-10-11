@@ -34,7 +34,7 @@ Extract adjacent sentence pairs similarity from contextualized sentence embeddin
 # Progress
 
 1. _ongoing_
-    - cosine similarity using word embeddings
+    - utterance level cosine similarity using paragraph (long text) embeddings
 2. _brainstorm_
     - derive logits with moving window strategy
     - derive logits with static strategy
