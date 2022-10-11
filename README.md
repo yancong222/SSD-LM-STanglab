@@ -19,10 +19,10 @@ SOC: second order cosine similarity between phrase separated by another interven
 flowchart LR
     A[Embedding Strategy] ==> B[Measurement unit]
     B == Word ==> C[Language Models]
-    C == Baseline ==> D[[GloVe]] ====> G[(Coherence within a window i, i=5,10)]
+    C == Baseline ==> D[[GloVe]] ====> G[(MV5/10: Coherence within a window i, i=5,10)]
     G ==> J{{min, max, mean, std}}
     G ==> K{{5%, 95%, median, IQR}}
-    D ====> P[(Coherence-Ki: word_id vs. word_id+i, i=2:10)]
+    D ====> P[(K2:10: word_id vs. word_id+i, i=2:10)]
     P ==> Q{{min, max, mean, std}}
     P ==> R{{5%, 95%, median, IQR}}
     C == Transformer ==> E[[BERT T5 GPT]] ====> H[(Coherence within a window i, i=5,10)]
