@@ -1,6 +1,6 @@
-## Using language models to improve accuracy of detecting language disturbances in Schizophrenia Spectrum Disorder Speech (click on the tree node to see details)
+# Using language models to improve accuracy of detecting language disturbances in Schizophrenia Spectrum Disorder Speech 
 
-## Large language models taxonomy overview:
+## Large language models taxonomy overview (click on the tree node to see details):
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '100px'}}}%%
@@ -75,9 +75,6 @@ FOC: the first order cosine similarity of consecutive phrase vectors
 
 SOC: second order cosine similarity between phrase separated by another intervening phrase
 
-## Pipeline details can be found in the PDF file
-
----------------------------------------------
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '100px'}}}%%
@@ -147,4 +144,6 @@ flowchart LR
 ```
 
 
+---------------------------------------------
+## Pipeline details can be found in the PDF file
 
