@@ -1,4 +1,6 @@
-# Using language models to improve accuracy of detecting language disturbances in Schizophrenia Spectrum Disorder Speech 
+# Understanding semantic and pragmatic disorders
+
+The goal of this project is to use language models to improve accuracy of detecting language disturbances in Schizophrenia Spectrum Disorder Speech 
 
 ## Large language models taxonomy overview (click on the tree node to see details):
 
