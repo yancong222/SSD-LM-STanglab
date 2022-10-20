@@ -2,7 +2,9 @@
 
 The goal of this project is to use language models to improve accuracy of detecting language disturbances in Schizophrenia Spectrum Disorder Speech 
 
-## Large language models taxonomy overview (click on the tree node to see details):
+## Large language models taxonomy sketch:
+
+(click on the tree node to see details)
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '100px'}}}%%
