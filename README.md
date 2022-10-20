@@ -2,9 +2,9 @@
 
 The goal of this project is to use language models to improve accuracy of detecting language disturbances in Schizophrenia Spectrum Disorder Speech 
 
-## Large language models taxonomy sketch:
+## Large language models taxonomy overview:
 
-(click on the tree node to see details)
+click on the tree node to see details
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'fontSize': '100px'}}}%%
@@ -159,17 +159,17 @@ flowchart LR
   segments_tensor = torch.tensor([segments_ids])
 
   """
-  Obtains BERT embeddings for tokens, in context of the given sentence.
+  Obtains BERT embeddings for tokens, in context of the given response (list of sentences).
   """
   list_token_embeddings = get_bert_embeddings(tokens_tensor, segments_tensors, model)
 
   sentences = ["he eventually sold the shares back to the bank at a premium. the river flowed over the bank. the next day a little girl walked by the river bank and picked a bouquet of flowers."]
-  token1 = context_embeddings[-20]
-  token2 = context_embeddings[-8]
+  token1 = context_embeddings[-20] # 'bank', with the intended meaning 'river bank'
+  token2 = context_embeddings[-8] # 'bank', with the intended meaning 'river bank'
   print('similarity between bank (river) vs. bank (river): ', 1-cosine(token1, token2))
 
-  token1 = context_embeddings[8]
-  token2 = context_embeddings[-2]
+  token1 = context_embeddings[8] # 'bank', with the intended meaning 'financial department'
+  token2 = context_embeddings[-2] # 'bank', with the intended meaning 'river bank'
   print('similarity between bank (financial) vs. bank (river): ', 1-cosine(token1, token2))
 
 ''' 
@@ -199,10 +199,10 @@ def divide_chunks(l, n):
     for i in range(0, len(l), n): 
         yield l[i:i + n]
 response = 'Mhm . I\'m a thirty five year old man who uh um , you know , is very technically inclined . um I uh tend to um like to be a s a jack of all trades and I find a lot of enjoyment in , you know , pursuing lots of hobbies uh at the same time .'
-response_emb = get_embeddings(response, your_engine) # get word embeddings, in context of the given response
+response_emb = get_embeddings(response, your_gpt3_engine) # get word embeddings, in context of the given response
 word_embed_chunk = list(divide_chunks(response_emb, int(5))) # divide into unit-5 chuncks
 print('GPT-3 response embeddings: ' response_emb)
-chunk_temp_agg = []
+chunk_temp_agg = [] # collect similarity for all the unit-5 chunk of the response
 for chunck_id, word_embed in enumerate(word_embed_chunk): # loop each unit-5 chunk
     temp_agg = []
     for word_id, embed in enumerate(word_embed): # aggregate similarity of each word within that unit-5 chunk
