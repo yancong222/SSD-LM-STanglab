@@ -73,10 +73,10 @@ flowchart TD
 
 ## Word/token level and Utterance level coherence measurements:
 
-- K2:10: the word-to-word variability at K inter-word distances, with K ranging from 2 to 10
-- MV5/10: the average semantic similarity of each word in 5- or 10- words window
-- FOC: the first order cosine similarity of consecutive phrase vectors
-- SOC: the second order cosine similarity between phrase separated by another intervening phrase
+    - K2:10: the word-to-word variability at K inter-word distances, with K ranging from 2 to 10
+    - MV5/10: the average semantic similarity of each word in 5- or 10- words window
+    - FOC: the first order cosine similarity of consecutive phrase vectors
+    - SOC: the second order cosine similarity between phrase separated by another intervening phrase
 
 
 ```mermaid
