@@ -265,6 +265,35 @@ similarity between s1 and s2: 0.9817931652069092  similarity between s2 and s3: 
 ```
 - GPT3: word level coherence computation
 ```py
+def demo_calc_gpt3(sent): 
+  temp = sent.split(' ') 
+  input = ' '.join([i for i in temp if (i != '') & ('{' not in i) & ('}' not in i) & ('#' not in i)]) 
+  vec = get_embeddings(input.split(' '), engine = 'text-similarity-babbage-001') 
+  return vec
+
+
+sentence1 = "He sold the shares back to the bank"
+sentence2 = "The river flowed over the bank"
+sentence3 = "A little girl walked by the river bank"
+
+bank1 = demo_calc_gpt3(sentence1)
+bank2 = demo_calc_gpt3(sentence2)
+bank3 = demo_calc_gpt3(sentence3)
+print(len(bank3[-1]))
+
+print(cosine_similarity(bank1, bank2))
+print(cosine_similarity(bank1, bank3))
+print(cosine_similarity(bank2, bank3))
+
+'''
+2048
+0.9999858467203809
+0.9999858467203809
+1.0
+'''
+```
+
+```py
 # Average semantic similarity of each word in 5- or 10- words window
 def divide_chunks(l, n):
     # looping till length l
