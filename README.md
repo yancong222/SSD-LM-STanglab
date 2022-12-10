@@ -147,6 +147,42 @@ flowchart LR
 ```
 
 ## Pipeline code skeletons:
+- Baseline: GloVe static embeddings
+```py
+fname = get_tmpfile("download/glove.6B.300d.w2v.txt")
+model = KeyedVectors.load_word2vec_format(fname)
+glove = model.wv
+
+def cosine_similarity(a, b):
+    return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
+    
+sentence1 = "He sold the shares back to the bank"
+sentence2 = "The river flowed over the bank"
+sentence3 = "A little girl walked by the river bank"
+
+def calc_glove(sent):
+    for w in sent.split(' '):
+        if w == 'bank':
+            return glove[w] 
+sentence1 = "He sold the shares back to the bank"
+sentence2 = "The river flowed over the bank"
+sentence3 = "A little girl walked by the river bank"
+bank1 = calc_glove(sentence1)
+bank2 = calc_glove(sentence2)
+bank3 = calc_glove(sentence3)
+print(bank3.shape)
+print(cosine_similarity(bank1, bank2))
+print(cosine_similarity(bank1, bank3))
+print(cosine_similarity(bank2, bank3))
+
+'''
+(300,)
+1.0
+1.0
+1.0
+'''
+```
+
 
 - BERT: word level coherence computation
 ```py
@@ -182,6 +218,38 @@ similarity between bank (financial) vs. bank (river):  0.6709258556365967
 '''
 ```
 - T5: sentence level coherence computation
+```py
+def get_last_hidden_state(sent):
+  inputs = tokenizer.encode(sent, return_tensors="tf", add_special_tokens=False)  # Batch size 1 # add special tokens or not?
+  outputs = model(inputs, decoder_input_ids=inputs)
+  # The last hidden-state is the first element of the output tuple (c.f. Raffel et al 2020)
+  last_hidden_states = outputs[0]  
+  return last_hidden_states
+
+def cosine_similarity(a, b):
+    return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
+
+sentence1 = "He sold the shares back to the bank"
+sentence2 = "The river flowed over the bank"
+sentence3 = "A little girl walked by the river bank"
+
+bank1 = get_last_hidden_state(sentence1)[0][-1]
+bank2 = get_last_hidden_state(sentence2)[0][-1]
+bank3 = get_last_hidden_state(sentence3)[0][-1]
+print(bank3.shape)
+
+print(cosine_similarity(bank1, bank2))
+print(cosine_similarity(bank1, bank3))
+print(cosine_similarity(bank2, bank3))
+
+'''
+TensorShape([512])
+0.94073576
+0.9394256
+0.9653907
+'''
+```
+
 ```py
 s1 = "hearty meal was devouring me"
 s2 = "hearty meal was devouring me yesterday in the park"
