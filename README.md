@@ -147,7 +147,7 @@ flowchart LR
 ```
 
 ## Pipeline code skeletons:
-- Baseline: GloVe static embeddings
+- Baseline: GloVe static embeddings demostration
 ```py
 fname = get_tmpfile("download/glove.6B.300d.w2v.txt")
 model = KeyedVectors.load_word2vec_format(fname)
@@ -184,7 +184,7 @@ print(cosine_similarity(bank2, bank3))
 ```
 
 
-- BERT: word level coherence computation
+- BERT: word level coherence computation 
 ```py
   """
   Preprocesses text input in a way that BERT can interpret.
@@ -217,7 +217,8 @@ similarity between bank (river) vs. bank (river):  0.8264750838279724
 similarity between bank (financial) vs. bank (river):  0.6709258556365967
 '''
 ```
-- T5: sentence level coherence computation
+
+- T5: word/sentence level coherence computation
 ```py
 def get_last_hidden_state(sent):
   inputs = tokenizer.encode(sent, return_tensors="tf", add_special_tokens=False)  # Batch size 1 # add special tokens or not?
@@ -263,6 +264,7 @@ print("similarity between s1 and s2: ", sim, " similarity between s2 and s3: ", 
 similarity between s1 and s2: 0.9817931652069092  similarity between s2 and s3: 0.8603241443634033
 '''
 ```
+
 - GPT3: word level coherence computation
 ```py
 def demo_calc_gpt3(sent): 
@@ -270,7 +272,6 @@ def demo_calc_gpt3(sent):
   input = ' '.join([i for i in temp if (i != '') & ('{' not in i) & ('}' not in i) & ('#' not in i)]) 
   vec = get_embeddings(input.split(' '), engine = 'text-similarity-babbage-001') 
   return vec
-
 
 sentence1 = "He sold the shares back to the bank"
 sentence2 = "The river flowed over the bank"
