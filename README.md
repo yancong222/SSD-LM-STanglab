@@ -201,20 +201,42 @@ print(cosine_similarity(bank2, bank3))
   """
   Obtains BERT embeddings for tokens, in context of the given response (list of sentences).
   """
-  list_token_embeddings = get_bert_embeddings(tokens_tensor, segments_tensors, model)
 
-  sentences = ["he eventually sold the shares back to the bank at a premium. the river flowed over the bank. the next day a little girl walked by the river bank and picked a bouquet of flowers."]
-  token1 = context_embeddings[-20] # 'bank', with the intended meaning 'river bank'
-  token2 = context_embeddings[-8] # 'bank', with the intended meaning 'river bank'
-  print('similarity between bank (river) vs. bank (river): ', 1-cosine(token1, token2))
+  sentence1 = ["He sold the shares back to the bank"]
+  sentence2 = ["The river flowed over the bank"]
+  sentence3 = ["A little girl walked by the river bank"]
+  
+  sentences = sentence1 + sentence2 + sentence3
+  
+  context_embeddings = []
+  context_tokens = []
+  for sentence in sentences: 
+    tokenized_text, tokens_tensor, segments_tensors = bert_text_preparation(sentence, tokenizer)
+    list_token_embeddings = get_bert_embeddings(tokens_tensor, segments_tensors, model)
+    tokens = OrderedDict()
+    for token in tokenized_text[1:-1]:
+      if token in tokens:
+        tokens[token] += 1
+      else:
+        tokens[token] = 1
+      token_indices = [i for i, t in enumerate(tokenized_text) if t == token]
+      current_index = token_indices[tokens[token]-1]
+      token_vec = list_token_embeddings[current_index]
+      context_tokens.append(token)
+      context_embeddings.append(token_vec)
 
-  token1 = context_embeddings[8] # 'bank', with the intended meaning 'financial department'
-  token2 = context_embeddings[-2] # 'bank', with the intended meaning 'river bank'
-  print('similarity between bank (financial) vs. bank (river): ', 1-cosine(token1, token2))
-
+  bank1 = context_embeddings[7]
+  bank2 = context_embeddings[13]
+  bank3 = context_embeddings[-1]
+  print(bank3.shape)
+  print(cosine_similarity(bank1, bank2))
+  print(cosine_similarity(bank1, bank3))
+  print(cosine_similarity(bank2, bank3))
 ''' 
-similarity between bank (river) vs. bank (river):  0.8264750838279724
-similarity between bank (financial) vs. bank (river):  0.6709258556365967
+torch.Size([768])
+0.7267714
+0.7151612
+0.88328594
 '''
 ```
 
