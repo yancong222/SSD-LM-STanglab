@@ -149,7 +149,7 @@ flowchart LR
 ## Pipeline code skeletons:
 - Baseline: GloVe static embeddings demostration
 ```py
-fname = get_tmpfile("download/glove.6B.300d.w2v.txt")
+fname = get_tmpfile("your directory/glove.6B.300d.w2v.txt")
 model = KeyedVectors.load_word2vec_format(fname)
 glove = model.wv
 
