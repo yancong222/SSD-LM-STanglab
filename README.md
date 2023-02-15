@@ -345,6 +345,7 @@ Average semantic similarity in 5-words window: 0.78
 '''
 ```
 ---------------------------------------------
-## Note
-
-Pipeline details can be found in the [PDF file](https://github.com/yancong222/SSD-LM-STanglab/blob/main/SSDHV_SemanticSimilarity_Methods.pdf)
+## Credit
+- **Pipeline details** can be found in the [PDF file](https://github.com/yancong222/SSD-LM-STanglab/blob/main/SSDHV_SemanticSimilarity_Methods.pdf)
+- **This program draws significantly insights from** Sunny X. Tang and Katrin Hansel
+- **This program is built up on** Andreas Pogiatzis (2019), Alberto Parola et al. (2022), Ashish Vaswani et al. (2017), Thomas Wolf et al. (2020), Tom Brown et al. (2020), and openai-python (https://github.com/openai/openai-python)
