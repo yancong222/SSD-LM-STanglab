@@ -1,6 +1,6 @@
-# Understanding semantic and pragmatic disorders
+# Understanding semantic and pragmatic fluencies
 
-The goal of this project is to use language models to improve accuracy of detecting language disturbances in Schizophrenia Spectrum Disorder Speech. There are three major components in this transformer pipelien: 
+The goal of this project is to use language models to improve accuracy of detecting language (dis)fluencies. There are three major components in this transformer pipeline: 
 
     - Get embedding vectors from the language models.
     - Calcuate semantic similarities scores with different word/utterance level strategies.
