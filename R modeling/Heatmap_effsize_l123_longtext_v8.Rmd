@@ -1,0 +1,97 @@
+---
+title: "Heatmap_effsize_pv005_3df_4lm_l123"
+author: "Yan Cong"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+library(effsize)
+
+library(Hmisc)
+library(hrbrthemes)
+library(lattice)
+library(plyr)
+library(dplyr)
+library(stringr)
+library(forcats)
+library(ggplot2)
+theme_update(text = element_text(size=11),
+             axis.text.x = element_text(angle=90, hjust=1))
+library(sciplot)
+library(tidyr)
+#library(hrbrthemes)
+library(viridis)
+library(reshape2)
+library(gridExtra)
+library(grid)
+library(corrplot)
+library(ggpubr)
+
+library('plot.matrix')
+library('psych')
+```
+
+
+
+```{r read in data, include=FALSE}
+data = read.csv("effsize_pv005_3df_4lm_l123_matched.csv", header = TRUE)  
+```
+
+
+```{r plot effect size no scaling all 3 levels together}
+#https://r-charts.com/correlation/heat-map-ggplot2/
+#https://www.royfrancis.com/a-guide-to-elegant-tiled-heatmaps-in-r-2019/
+#https://www.youtube.com/watch?v=-4sGamyqGAQ
+
+longData<-melt(data, id = c('measure'))
+#replace na with 0
+longData <- longData %>% replace(is.na(.), 0)
+
+name = fct_relevel(longData$measure, 
+            'foc',
+'soc',
+'mv5',
+'mv10',
+'k1',
+'k2',
+'k3',
+'k4',
+'k5',
+'k6',
+'k7',
+'k8',
+'k9',
+'k10')
+
+plot <- ggplot(longData, aes(x = longData$variable, y = name)) + 
+  geom_tile(aes(fill = value),color = "white", # width=0.5, 
+            lwd = 0.1,
+            linetype = 1) +
+  geom_text(aes(label = value), color = case_when(
+      longData$value == 0 ~ "white",
+      longData$value != 0 ~ "black"), size = 2) +
+  guides(fill = guide_colourbar(title = "Cohen's d"))+
+  scale_fill_gradient2(low = "steelblue", mid = "white", high = "brown") +
+  #Welch’s (equal population variance false)
+  labs(x="Models", y="Measures") + #, title="Groupwise effect sizes with p<0.10. Open narratives."
+  theme_classic() + theme(axis.text.x=element_text(size=5, angle=0, vjust=0.3),
+                     axis.text.y=element_text(size=5), 
+                     plot.title=element_text(size=5),
+                     legend.text = element_text(size=3),
+                     legend.title = element_text(size=3),
+                     legend.key.height= unit(0.5, 'cm'),
+                     legend.key.width= unit(0.25, 'cm'),
+                     axis.title=element_text(size=5)) + 
+  coord_fixed(ratio = 0.2)+
+  theme(panel.grid.major = element_blank(),panel.grid.minor = element_blank(), panel.background = element_blank())
+
+annotate_figure(plot, top = text_grob("Diagnostic group effect size with three levels of cleanings N=74 SSD=37 HV=37 (sig. 0.05) ", 
+               color = "orange", face = "bold", size = 7))
+
+
+ggsave('3dfEffsizeP005L123LongTextMatchedSample.png', dpi = 300) #height=5.5, width=8.8, units="in", 
+```
+
+
