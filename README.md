@@ -1,6 +1,6 @@
-# Understanding semantic and pragmatic fluencies
+# Representational analysis
 
-The goal of this project is to use language models to improve accuracy of detecting language (dis)fluencies. There are three major components in this transformer pipeline: 
+The goal of this project is to use language models to improve accuracy of detecting language disorders. There are three major components in this transformer pipeline: 
 
     - Get embedding vectors from the language models.
     - Calcuate semantic similarities scores with different word/utterance level strategies.
